@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DennisCho</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0 3px;
+        font-family: "Roboto Condensed", sans-serif;
+      }
+
+      body {
+        background-color: black;
+        color: white;
+      }
+
+      #nav {
+        display: flex;
+        justify-content: space-between;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 30px;
+      }
+
+      .navbar__right {
+        display: flex;
+        font-size: 14px;
+      }
+
+      .navbar__menu {
+        padding: 5px;
+      }
+
+      .navbar__menu > i {
+        font-size: 18px;
+        cursor: pointer;
+        transition: all 300ms;
+      }
+
+      .navbar__menu > i:hover {
+        transform: scale(1.2);
+      }
+
+      /* 메인 */
+
+      #main {
+        display: flex;
+        padding-top: 5%;
+        margin: 30px 0;
+        justify-content: space-between;
+      }
+
+      .selected__sub {
+        font-size: 15px;
+        font-weight: 300;
+      }
+
+      .selected__menu {
+        font-size: 40px;
+        line-height: 75px;
+        cursor: pointer;
+        display: flex;
+      }
+      .selected__menu-title:hover {
+        animation-name: title-change;
+        animation-duration: 400ms;
+        animation-fill-mode: forwards;
+      }
+
+      @keyframes title-change {
+        from {
+          color: white;
+        }
+        to {
+          transform: rotateX(40deg);
+          color: rgba (255, 255, 255, 0.7);
+          text-decoration: line-through;
+        }
+      }
+
+      .selected__menu-sub {
+        font-size: 12px;
+        margin-left: 30px;
+      }
+
+      .selected__img {
+        width: 50%;
+        position: relative;
+      }
+
+      /* 작은 화면에선 none하기 */
+      .selected__show-img {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        height: auto;
+        padding-right: 20px;
+      }
+
+      @media all and (max-width: 1024px) {
+        .selected__img {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav id="nav">
+      <div class="navbar">
+        <div class="navbar__title">DennisCho</div>
+        <div class="navbar__title">
+          Multidisciplinary Design
+        </div>
+      </div>
+
+      <div class="navbar__right">
+        <div class="navbar__menu">Projects</div>
+        <div class="navbar__menu">About/Contact</div>
+        <div class="navbar__menu"><i class="fab fa-instagram"></i></div>
+        <div class="navbar__menu"><i class="fab fa-facebook"></i></div>
+        <div class="navbar__menu"><i class="fab fa-blogger"></i></div>
+      </div>
+    </nav>
+
+    <main id="main">
+      <div class="selected">
+        <span class="selected__sub">Selected Projects</span>
+        <div class="selected__menu">
+          <div class="selected__menu-title">
+            Gerdesmeyer & Krohn
+          </div>
+          <span class="selected__menu-sub">Editorial</span>
+        </div>
+        <div class="selected__menu">
+          <div class="selected__menu-title">
+            Emma Hartving
+          </div>
+          <span class="selected__menu-sub">Website</span>
+        </div>
+        <div class="selected__menu">
+          <div class="selected__menu-title">
+            AGL Website
+          </div>
+          <span class="selected__menu-sub">E-Commers</span>
+        </div>
+        <div class="selected__menu">
+          <div class="selected__menu-title">
+            e15 Furniture
+          </div>
+          <span class="selected__menu-sub">Website</span>
+        </div>
+        <div class="selected__menu">
+          <div class="selected__menu-title">
+            MILLY- New York
+          </div>
+          <span class="selected__menu-sub">Campaign</span>
+        </div>
+        <div class="selected__menu">
+          <div class="selected__menu-title">
+            C&Z Real Estate
+          </div>
+          <span class="selected__menu-sub">Branding</span>
+        </div>
+      </div>
+
+      <div class="selected__img">
+        <div class="selected__img-show">
+          <img
+            src="/images/1.jpg"
+            alt="1"
+            class="selected__show-img"
+            width="100%"
+          />
+        </div>
+        <div class="selected__img-show">
+          <img
+            src="/images/2.jpg"
+            alt="2"
+            class="selected__show-img"
+            width="100%"
+          />
+        </div>
+        <div class="selected__img-show">
+          <img
+            src="/images/3.jpg"
+            alt="3"
+            class="selected__show-img"
+            width="100%"
+          />
+        </div>
+        <div class="selected__img-show">
+          <img
+            src="/images/4.jpg"
+            alt="4"
+            class="selected__show-img"
+            width="100%"
+          />
+        </div>
+        <div class="selected__img-show">
+          <img
+            src="/images/crew.jpg"
+            alt="5"
+            class="selected__show-img"
+            width="100%"
+          />
+        </div>
+        <div class="selected__img-show">
+          <img
+            src="/images/techs.jpg"
+            alt="6"
+            class="selected__show-img"
+            width="100%"
+          />
+        </div>
+      </div>
+    </main>
+
+    <footer id="footer">
+      <div class="footer__nav">
+        All Projects / Archive [9]
+        <span class="footer__nav-arrowup"
+          ><i class="far fa-arrow-alt-circle-up"></i
+        ></span>
+      </div>
+    </footer>
+
+    <script
+      defer
+      src="https://kit.fontawesome.com/66fd1dbf65.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
