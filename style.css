@@ -6,7 +6,9 @@
 body {
   background-color: black;
 }
+
 #main {
+  background-color: black;
   color: white;
   padding: 10px;
 }
@@ -31,11 +33,12 @@ body {
 
 .navbar__right {
   display: flex;
-  font-size: 15px;
+  font-size: 14px;
+  margin-right: 2%;
 }
 
 .navbar__menu {
-  padding: 0 15px;
+  margin-right: 19px;
   cursor: pointer;
 }
 
@@ -55,25 +58,25 @@ body {
 /* 메인 */
 
 #article {
+  margin: 0 10px;
+}
+.selected {
+  position: fixed;
+  bottom: 20%;
+}
+
+.selected__menu {
   display: flex;
-  margin: 30px 0;
-  justify-content: space-between;
-  align-items: center;
+  font-family: "Roboto Condensed", sans-serif;
+  color: rgb(87, 87, 87);
+  font-size: 50px;
+  line-height: 75px;
+  cursor: pointer;
 }
 
 .selected__sub {
   font-size: 15px;
   font-weight: 300;
-  width: 50%;
-}
-
-.selected__menu {
-  font-family: "Roboto Condensed", sans-serif;
-  color: rgb(87, 87, 87);
-  font-size: 3rem;
-  line-height: 75px;
-  cursor: pointer;
-  display: flex;
 }
 
 .selected__menu-title:hover {
@@ -97,43 +100,35 @@ body {
 }
 
 .selected__img {
-  position: relative;
+  position: fixed;
+  height: 100%;
   width: 50%;
+  right: 25px;
+  overflow: hidden;
+  bottom: 25px;
+  z-index: -1;
 }
 
 .selected__img-show {
-  position: absolute;
-  top: 0;
-  right: 0;
-  height: auto;
+  position: relative;
 }
 
 .selected__show-img {
-  padding-right: 20px;
+  position: absolute;
+  padding-top: 105px;
+  min-height: 768px;
+  height: 100vh;
+  right: 10%;
 }
 
 /* footer */
-.footer__nav-arrowup {
-  cursor: pointer;
-}
 
 #footer {
-  display: flex;
-  padding-top: 3%;
-  align-self: flex-end;
+  position: fixed;
+  bottom: 2%;
 }
-
-@media all and (max-width: 1024px) {
-  #article {
-    padding-top: 5%;
-  }
-  .selected__img {
-    display: none;
-  }
-
-  #footer {
-    padding-top: 3%;
-  }
+.footer__nav-arrowup {
+  cursor: pointer;
 }
 
 /* 카드섹션 */
@@ -150,12 +145,13 @@ body {
 .section__title {
   position: fixed;
   background-color: rgba(0, 0, 0, 0.8);
+  top: 0%;
+  line-height: 48px;
   width: 100%;
-  height: 43px;
-  top: 0;
+  height: 48px;
   padding-left: 3%;
   transition: all 300ms;
-  transform: translateY(-50%);
+  transform: translateY(-70%);
 }
 
 .projects__container {
@@ -165,18 +161,19 @@ body {
   justify-content: space-around;
   text-align: center;
   transition: all 1s;
-  transform: translateY(80%);
+  transform: translateY(90%);
 }
 
 .projects__container-contents {
-  width: 350px;
+  width: 25%;
   margin: 6px 0px;
+  padding: 100px;
 }
 
 .projects__container-img {
   width: 100%;
   height: auto;
-  padding: 0 20px;
+  cursor: pointer;
 }
 
 .projects__container-desc {
@@ -191,4 +188,10 @@ body {
 
 .active {
   color: white;
+}
+
+@media all and (max-width: 990px) {
+  .selected__img {
+    display: none;
+  }
 }
