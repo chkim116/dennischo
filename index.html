@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <main id="main">
+    <container id="container">
       <nav id="nav">
         <div class="navbar">
           <div class="navbar__title">DennisCho</div>
@@ -21,17 +21,19 @@
         </div>
 
         <div class="navbar__right">
-          <div class="navbar__menu">Projects</div>
-          <div class="navbar__menu">About/Contact</div>
-          <div class="navbar__menu"><i class="fab fa-instagram"></i></div>
-          <div class="navbar__menu"><i class="fab fa-facebook"></i></div>
-          <div class="navbar__menu"><i class="fab fa-blogger"></i></div>
+          <div class="navbar__right-items">Projects</div>
+          <div class="navbar__right-items">About/Contact</div>
+          <div class="navbar__right-items">
+            <i class="fab fa-instagram"></i>
+          </div>
+          <div class="navbar__right-items"><i class="fab fa-facebook"></i></div>
+          <div class="navbar__right-items"><i class="fab fa-blogger"></i></div>
         </div>
       </nav>
 
       <article id="article">
         <div class="selected">
-          <span class="selected__sub">Selected Projects</span>
+          <span class="selected__title">Selected Projects</span>
           <div class="selected__menu active">
             <div class="selected__menu-title" data-set="title-one">
               Gerdesmeyer & Krohn
@@ -71,46 +73,46 @@
         </div>
 
         <div class="selected__img">
-          <div class="selected__img-show">
+          <div class="selected__img-list">
             <img
               src="images/cleyton-ewerton-rdgbkWamdn0-unsplash.jpg"
               alt="1"
-              data-filter="title-oneimg"
+              data-filter="title-one"
             />
           </div>
-          <div class="selected__img-show">
+          <div class="selected__img-list">
             <img
               src="images/eugenivy_reserv-fEqCXcupCks-unsplash.jpg"
               alt="2"
-              data-filter="title-twoimg"
+              data-filter="title-two"
             />
           </div>
-          <div class="selected__img-show">
+          <div class="selected__img-list">
             <img
               src="images/farrinni-IwrG-80w6yA-unsplash.jpg"
               alt="3"
-              data-filter="title-treeimg"
+              data-filter="title-tree"
             />
           </div>
-          <div class="selected__img-show">
+          <div class="selected__img-list">
             <img
               src="images/joseph-menjivar-F-A5v4BirZM-unsplash.jpg"
               alt="4"
-              data-filter="title-fourimg"
+              data-filter="title-four"
             />
           </div>
-          <div class="selected__img-show">
+          <div class="selected__img-list">
             <img
               src="images/omar-prestwich-FVMRlSO8M8k-unsplash.jpg"
               alt="5"
-              data-filter="title-fivimg"
+              data-filter="title-five"
             />
           </div>
-          <div class="selected__img-show">
+          <div class="selected__img-list">
             <img
               src="images/paulo-silva-VKwerqIf2J0-unsplash.jpg"
               alt="6"
-              data-filter="title-siximg"
+              data-filter="title-six"
             />
           </div>
         </div>
@@ -123,7 +125,7 @@
           ></span>
         </div>
       </footer>
-    </main>
+    </container>
 
     <!-- show All projects/ Archive -->
     <section id="section">
@@ -207,7 +209,7 @@
         </div>
       </content>
     </section>
-
+    <script src="index.js"></script>
     <script
       defer
       src="https://kit.fontawesome.com/66fd1dbf65.js"

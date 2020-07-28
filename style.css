@@ -7,7 +7,7 @@ body {
   background-color: black;
 }
 
-#main {
+#container {
   color: white;
   padding: 10px;
 }
@@ -36,7 +36,7 @@ body {
   margin-right: 2%;
 }
 
-.navbar__menu {
+.navbar__right-items {
   margin-right: 19px;
   cursor: pointer;
 }
@@ -61,7 +61,7 @@ body {
 }
 .selected {
   position: fixed;
-  bottom: 20%;
+  bottom: 13%;
 }
 
 .selected__menu {
@@ -73,13 +73,17 @@ body {
   cursor: pointer;
 }
 
+.selected__menu:hover {
+  color: white;
+}
+
 .selected__menu-title:hover {
   animation-name: title-change;
   animation-duration: 400ms;
   animation-fill-mode: forwards;
 }
 
-.selected__sub {
+.selected__title {
   font-size: 15px;
   font-weight: 300;
 }
@@ -109,7 +113,7 @@ body {
   z-index: -1;
 }
 
-.selected__img-show {
+.selected__img-list {
   position: absolute;
   right: 10%;
   min-height: 100%;
