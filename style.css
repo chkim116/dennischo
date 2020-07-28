@@ -145,10 +145,8 @@ body {
 
 #footer {
   position: fixed;
-  bottom: 2%;
-}
-.footer__nav-arrowup {
   cursor: pointer;
+  bottom: 2%;
 }
 
 /* 카드섹션 */
@@ -172,7 +170,6 @@ body {
   padding-left: 3%;
   transition: all 300ms;
   transform: translateY(-70%);
-  display: none;
 }
 
 .projects__container {
