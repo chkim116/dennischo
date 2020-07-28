@@ -320,7 +320,6 @@ body {
 }
 
 .projects__container-img {
-  display: flex;
   width: 300px;
   height: 450px;
   text-align: center;
@@ -365,6 +364,7 @@ body {
 @media all and (max-width: 768px) {
   #section {
     display: block;
+    z-index: 0;
   }
 
   .section__title,
@@ -374,8 +374,9 @@ body {
   }
   #about__slide {
     width: 100%;
-    top: 80px;
-    z-index: 300;
+    position: fixed;
+    top: 0px;
+    z-index: 1;
   }
 
   .delbtn {
