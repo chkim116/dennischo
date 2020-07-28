@@ -1,5 +1,6 @@
 const openSection = document.querySelector(".footer__nav");
 const section = document.querySelector("#section");
+const sectionTitle = document.querySelector(".section__title");
 
 function onSection() {
   section.style.display = "block";
