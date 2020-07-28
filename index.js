@@ -17,7 +17,8 @@ selectedMenuList.forEach((list) => {
       }
     });
   });
-  list.addEventListener("mouseout", (list) => {
+
+  list.addEventListener("mouseout", () => {
     selectedImgList.forEach((img) => {
       img.classList.remove("showing");
       selectedImgList[0].classList.add("showing");

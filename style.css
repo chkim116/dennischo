@@ -40,7 +40,7 @@ body {
 }
 
 .navbar__right-items {
-  margin-right: 19px;
+  margin-right: 40px;
   cursor: pointer;
 }
 
@@ -48,27 +48,22 @@ body {
   color: rgba(247, 247, 247, 0.5);
 }
 
-.navbar__right-items:hover {
-  text-decoration: underline;
-}
-.navbar__right-items > i {
-  font-size: large;
-  cursor: pointer;
-  transition: all 300ms;
+.navbar__right-items:nth-child(2):visited {
 }
 
-.navbar__right-items > i:hover {
-  transform: scale(1.2);
+.navbar__right-items:hover {
+  text-decoration: underline;
 }
 
 /* about 슬라이더 */
 
 #about__slide {
   position: absolute;
-  background-color: white;
-  right: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  right: -20%;
   width: 20%;
   height: 100%;
+  display: none;
   display: flex;
   margin: 0;
   flex-direction: column;
@@ -76,8 +71,53 @@ body {
   justify-content: space-evenly;
 }
 
+#about__slide.showing {
+  right: 0;
+}
+
 .about__item {
   padding: 50;
+  color: white;
+}
+
+.about__item > a > i {
+  font-size: 40px;
+  cursor: pointer;
+}
+
+.fa-instagram {
+  color: red;
+}
+
+.fa-github {
+  color: white;
+}
+
+.fa-blogger {
+  color: green;
+}
+
+.about__item > a > i:hover {
+  animation: moving__icon 1s;
+}
+@keyframes moving__icon {
+  0% {
+    transform: skewX(40deg);
+  }
+  25% {
+    transform: skewX(0deg);
+    transform: rotateX(40deg);
+  }
+  70% {
+    transform: translateZ(25px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.about__contact {
+  padding: 30px;
 }
 
 /* 메인 */
