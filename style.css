@@ -5,7 +5,11 @@
 
 body {
   background-color: black;
+  font-family: "Roboto Condensed", sans-serif;
   margin: 0 10px;
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
 }
 
 #container {
@@ -16,14 +20,12 @@ body {
 #nav {
   display: flex;
   justify-content: space-between;
-  font-size: 18px;
-  font-weight: 700;
+  font-size: large;
   background-color: black;
 }
 
 .navbar__title:nth-child(1) {
   font-size: 15px;
-  font-weight: 300;
   cursor: pointer;
 }
 
@@ -33,7 +35,7 @@ body {
 
 .navbar__right {
   display: flex;
-  font-size: 14px;
+  font-size: large;
   margin-right: 2%;
 }
 
@@ -50,13 +52,32 @@ body {
   text-decoration: underline;
 }
 .navbar__right-items > i {
-  font-size: 18px;
+  font-size: large;
   cursor: pointer;
   transition: all 300ms;
 }
 
 .navbar__right-items > i:hover {
   transform: scale(1.2);
+}
+
+/* about 슬라이더 */
+
+#about__slide {
+  position: absolute;
+  background-color: white;
+  right: 0;
+  width: 20%;
+  height: 100%;
+  display: flex;
+  margin: 0;
+  flex-direction: column;
+  text-align: center;
+  justify-content: space-evenly;
+}
+
+.about__item {
+  padding: 50;
 }
 
 /* 메인 */
@@ -71,7 +92,6 @@ body {
 
 .selected__menu {
   display: flex;
-  font-family: "Roboto Condensed", sans-serif;
   color: rgb(87, 87, 87);
   font-size: 50px;
   line-height: 75px;
@@ -154,7 +174,7 @@ body {
 
 #section {
   color: white;
-  z-index: 200px;
+  z-index: 200;
   background-color: rgba(0, 0, 0, 0.8);
   position: absolute;
   top: 10%;
@@ -201,17 +221,41 @@ body {
 .projects__container-contents {
   width: 30%;
   margin: 6px 0;
+  position: relative;
 }
 
 .projects__container-img {
-  width: 250px;
+  display: flex;
+  width: 300px;
   height: 450px;
   text-align: center;
   cursor: pointer;
+  justify-content: space-around;
+  margin: 0 16px;
+}
+
+.projects__hide_desc {
+  position: absolute;
+  z-index: 1000;
+  width: 300px;
+  height: 450px;
+  top: 0;
+  margin: 0 16px;
+  opacity: 0;
+  transition: all 300ms;
+  transform: translateX(-60px);
+  cursor: pointer;
+  background-color: rgba(12, 83, 28, 0.4);
+}
+
+.projects__hide_desc:hover {
+  opacity: 1;
+
+  transform: translateX(0);
 }
 
 .projects__container-desc {
-  font-size: 17px;
+  font-size: large;
   text-align: left;
   padding-left: 25px;
 }
