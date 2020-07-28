@@ -9,7 +9,11 @@ function onSection() {
 openSection.addEventListener("click", onSection);
 
 function outSection() {
-  section.style.display = "none";
+  if (window.innerWidth < 768) {
+    section.style.display = "block";
+  } else {
+    section.style.display = "none";
+  }
 }
 
 section.addEventListener("click", outSection);
