@@ -7,9 +7,14 @@ const sectionCloseBtn = document.querySelector(".projects__close-btn");
 let isSection = false;
 
 function onSectionBy768() {
-  if (768 >= innerWidth && isSection === false) {
+  if (768 >= window.innerWidth && isSection === false) {
     section.style.display = "block";
     isSection = true;
+  }
+    else {
+      section.style.display = "none";
+    isSection = false;
+    }
   }
 }
 
