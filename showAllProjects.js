@@ -6,19 +6,6 @@ const sectionCloseBtn = document.querySelector(".projects__close-btn");
 
 let isSection = false;
 
-window.addEventListener("scroll", () => {
-  let scrollTop = document.documentElement.scrollTop;
-  {
-    behavior: "smooth";
-  }
-  if (scrollTop !== 0 || 768 >= innerWidth) {
-    return;
-  } else {
-    section.style.display = "none";
-    isSection = false;
-  }
-});
-
 function onSectionBy768() {
   if (768 >= innerWidth && isSection === false) {
     section.style.display = "block";
@@ -32,7 +19,6 @@ function onSection() {
   if (isSection === false) {
     section.style.display = "block";
     isSection = true;
-    console.log("onSection", isSection);
   }
 }
 
@@ -42,7 +28,6 @@ function outSection() {
   if (isSection === true && window.innerWidth > 768) {
     section.style.display = "none";
     isSection = false;
-    console.log("outsection", isSection);
   }
 }
 
