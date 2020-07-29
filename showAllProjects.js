@@ -8,10 +8,15 @@ let isSection = false;
 
 window.addEventListener("scroll", () => {
   let scrollTop = document.documentElement.scrollTop;
+  {
+    behavior: "smooth";
+  }
   if (scrollTop !== 0 || 768 >= innerWidth) {
     return;
-  } else section.style.display = "none";
-  isSection = false;
+  } else {
+    section.style.display = "none";
+    isSection = false;
+  }
 });
 
 function onSectionBy768() {
