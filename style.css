@@ -374,7 +374,7 @@ body {
   width: 300px;
   height: 450px;
   top: 0;
-  margin: 0px 16px;
+  margin: 0px;
   opacity: 0;
   transition: all 300ms;
   transform: translateX(-60px);
@@ -412,6 +412,10 @@ body {
   #footer {
     display: none;
   }
+
+  #about__close {
+    position: fixed;
+  }
   #about__slide {
     width: 100%;
     position: fixed;
@@ -427,10 +431,19 @@ body {
     display: none;
   }
 
+  .projects__container {
+    margin-top: 80px;
+
+  }
   .projects__container-contents {
     width: 100%;
   }
+  .projects__hide_desc {
+    display: none;
+  }
+
 }
+
 
 @media all and (max-width: 425px) {
   #nav {
