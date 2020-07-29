@@ -277,6 +277,7 @@ body {
   position: fixed;
   cursor: pointer;
   bottom: 2%;
+  z-index: 100;
 }
 
 /* 카드섹션 */
@@ -365,16 +366,15 @@ body {
   height: 450px;
   text-align: center;
   cursor: pointer;
-  margin: 8px 16px;
+  margin: 0 16px;
 }
 
 .projects__hide_desc {
   position: absolute;
-  z-index: 200;
   width: 300px;
   height: 450px;
   top: 0;
-  margin: 8px 16px;
+  margin: 0px 16px;
   opacity: 0;
   transition: all 300ms;
   transform: translateX(-60px);
