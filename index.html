@@ -16,10 +16,15 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <div class="loading"></div>
     <container id="container">
+
+      <!-- 넷바 시작 -->
       <nav id="nav">
         <div class="navbar">
-          <div class="navbar__title">DennisCho</div>
+          <div class="navbar__title"><a href=""> 
+            DennisCho</div>
+          </a>
           <div class="navbar__title">
             Multidisciplinary Design
           </div>
@@ -31,7 +36,6 @@
         </div>
       </nav>
       
-      <div class="wrap__slide">
       
         <!-- 딜렉트 버튼 -->
         <div id="about__close">
@@ -60,7 +64,6 @@
             <div class="about__contact">Think__Container</div>
           </div>
         </div>
-      </div>
 
       <!-- 셀렉 메뉴 -->
       <article id="article">
@@ -114,6 +117,7 @@
           </div>
         </div>
 
+        <!-- 셀렉 메뉴에 따른 이미지 -->
         <div class="selected__img">
           <div class="slected__wrap">
             <div class="selected__img-list showing" data-filter="title-one">
@@ -177,14 +181,21 @@
           All Projects / Archive
         </h2>
       </div>
+      <div class="projects__close">
+        <div class="projects__close-btn">Close X
+        </div>
+      </div>
       <content id="content">
         <div class="projects__container">
           <div class="projects__container-contents">
-            <img
+            <a href="naver.com" >
+
+              <img
               src="images/projects1.jpg"
               alt=""
               class="projects__container-img"
-            />
+              />
+            </a>
             <div class="projects__hide_desc">
               fsmfmskfsdkfdmskmeljkenqwioj123213j
             </div>
@@ -284,9 +295,12 @@
         </div>
       </content>
     </section>
+
+
     <script src="index.js"></script>
     <script src="showAboutSlider.js"></script>
     <script src="showAllProjects.js"></script>
+    <script src="loading.js"></script>
     <script
       defer
       src="https://kit.fontawesome.com/66fd1dbf65.js"

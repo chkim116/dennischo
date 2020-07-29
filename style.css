@@ -9,6 +9,26 @@ body {
   margin: 0 10px;
 }
 
+.loading {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  background: black;
+  z-index: 1000;
+  animation: loading 550ms forwards;
+}
+
+@keyframes loading {
+  0% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
 #container {
   color: white;
   padding: 10px;
@@ -21,12 +41,14 @@ body {
   background-color: black;
 }
 
-.navbar__title:nth-child(1) {
-  font-size: 15px;
+.navbar__title > a {
+  text-decoration: none;
+  color: white;
   cursor: pointer;
+  font-size: 15px;
 }
 
-.navbar__title:nth-child(1):hover {
+.navbar__title > a:hover {
   text-decoration: underline;
 }
 
@@ -50,10 +72,6 @@ body {
 }
 
 /* about 슬라이더 */
-
-.wrap__slide {
-  float: right;
-}
 
 .delbtn {
   width: 25px;
@@ -94,7 +112,6 @@ body {
   font-size: 35px;
   cursor: pointer;
   animation: delBtn 450ms;
-  border-radius: 40%;
   display: none;
 }
 
@@ -109,14 +126,10 @@ body {
 #about__slide {
   position: absolute;
   background-color: rgba(0, 0, 0, 0.7);
-  right: -20%;
   width: 20%;
   height: 100%;
-  display: flex;
   margin: 0;
-  flex-direction: column;
   text-align: center;
-  justify-content: space-evenly;
   display: none;
   overflow: hidden;
 }
@@ -196,9 +209,7 @@ body {
 }
 
 .selected__menu-title:hover {
-  animation-name: title-change;
-  animation-duration: 400ms;
-  animation-fill-mode: forwards;
+  animation: title-change 400ms forwards;
 }
 
 .selected__title {
@@ -294,13 +305,39 @@ body {
   }
 }
 
+.projects__close {
+  position: fixed;
+  right: 5%;
+  top: 5%;
+  z-index: 450;
+}
+
+.projects__close-btn {
+  margin-bottom: 4px;
+  transition: all 300ms;
+  animation: close-btn_slide 500ms forwards;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+@keyframes close-btn_slide {
+  from {
+    transform: translateX(300px);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
 .projects__container {
   display: flex;
   width: 100%;
+  padding-top: 15%;
   flex-wrap: wrap;
   justify-content: center;
   animation: projects__silde 1s;
 }
+
 @keyframes projects__silde {
   from {
     transform: translateY(90%);
@@ -381,6 +418,10 @@ body {
 
   .delbtn {
     z-index: 300;
+  }
+
+  .projects__close {
+    display: none;
   }
 
   .projects__container-contents {

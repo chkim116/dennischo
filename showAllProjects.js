@@ -2,12 +2,22 @@ const openSection = document.querySelector(".footer__nav");
 const section = document.querySelector("#section");
 const sectionTitle = document.querySelector(".section__title");
 
+const sectionCloseBtn = document.querySelector(".projects__close-btn");
+
 let isSection = false;
+
+window.addEventListener("scroll", () => {
+  let scrollTop = document.documentElement.scrollTop;
+  if (scrollTop !== 0 || 768 >= innerWidth) {
+    return;
+  } else section.style.display = "none";
+  isSection = false;
+});
+
 function onSectionBy768() {
   if (768 >= innerWidth && isSection === false) {
     section.style.display = "block";
     isSection = true;
-    console.log("onSectionBy768", isSection);
   }
 }
 
@@ -31,4 +41,4 @@ function outSection() {
   }
 }
 
-section.addEventListener("click", outSection);
+sectionCloseBtn.addEventListener("click", outSection);
