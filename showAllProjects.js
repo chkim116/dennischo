@@ -10,11 +10,9 @@ function onSectionBy768() {
   if (768 >= window.innerWidth && isSection === false) {
     section.style.display = "block";
     isSection = true;
-  }
-    else {
-      section.style.display = "none";
+  } else {
+    section.style.display = "none";
     isSection = false;
-    }
   }
 }
 
