@@ -40,6 +40,7 @@ body {
 }
 
 #nav {
+  padding: 10px;
   display: flex;
   justify-content: space-between;
   font-size: large;
@@ -254,8 +255,7 @@ body {
 }
 
 .selected__img-list > img {
-  width: 100%;
-  min-height: 100%;
+  max-width: 100%;
   animation: moveImg 1000ms;
 }
 
@@ -433,7 +433,6 @@ body {
 
   .projects__container {
     margin-top: 80px;
-
   }
   .projects__container-contents {
     width: 100%;
@@ -441,9 +440,7 @@ body {
   .projects__hide_desc {
     display: none;
   }
-
 }
-
 
 @media all and (max-width: 425px) {
   #nav {
