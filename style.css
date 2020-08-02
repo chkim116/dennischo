@@ -241,9 +241,9 @@ body {
   position: fixed;
   overflow: hidden;
   width: 50%;
+  min-width: 25%;
   height: 100%;
   right: 25px;
-  bottom: 2%;
   z-index: -1;
   padding-top: 125px;
 }
@@ -251,11 +251,15 @@ body {
 .selected__img-list {
   position: absolute;
   right: 7%;
+  bottom: 0;
+  max-height: 1200px;
+  min-height: 760px;
   display: none;
 }
 
 .selected__img-list > img {
   max-width: 100%;
+  max-height: 100%;
   animation: moveImg 1000ms;
 }
 
