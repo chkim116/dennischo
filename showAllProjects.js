@@ -6,20 +6,25 @@ const sectionCloseBtn = document.querySelector(".projects__close-btn");
 
 let isSection = false;
 
+if (768 >= window.innerWidth) {
+  isSection = true;
+  section.style.display = "block";
+}
+
 function onSectionBy768() {
-  if (768 >= window.innerWidth && isSection === false) {
-    section.style.display = "block";
+  if (768 >= window.innerWidth) {
     isSection = true;
+    section.style.display = "block";
   } else {
-    section.style.display = "none";
     isSection = false;
+    section.style.display = "none";
   }
 }
 
 window.addEventListener("resize", onSectionBy768);
 
 function onSection() {
-  if (isSection === false) {
+  if (!isSection) {
     section.style.display = "block";
     isSection = true;
   }
@@ -28,7 +33,7 @@ function onSection() {
 openSection.addEventListener("click", onSection);
 
 function outSection() {
-  if (isSection === true && window.innerWidth > 768) {
+  if (isSection) {
     section.style.display = "none";
     isSection = false;
   }
